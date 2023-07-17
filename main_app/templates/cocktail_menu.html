@@ -1,4 +1,21 @@
 {% extends 'base.html' %}
 
 {% block title %} Cocktail - Mixxr {% endblock %}
-<h1>Cockltail </h1>
+{% block content %}
+  <div class="container">
+    <h1 class="text-center my-5">Cocktail Menu</h1>
+    <div class="row">
+      {% for cocktail in cocktails %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="{{ cocktail.image }}" class="card-img-top custom-image " alt="{{ cocktail.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ cocktail.name }}</h5>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
