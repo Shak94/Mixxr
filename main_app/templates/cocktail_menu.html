@@ -12,7 +12,9 @@
             <img src="{{ cocktail.image }}" class="card-img-top custom-image " alt="{{ cocktail.name }}">
             <div class="card-body">
               <h5 class="card-title">{{ cocktail.name }}</h5>
-              <a href="#" class="btn btn-primary">View Details</a>
+              {% for cocktail in cocktails %}
+              <a href="{% url 'cocktail_detail' cocktail.pk %}" 
+              class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>

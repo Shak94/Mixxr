@@ -1,0 +1,20 @@
+{% extend 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <img
+          src="{{cocktail.image}}"
+          class="card-img-top"
+          alt="cocktail_Image"
+        />
+        <div class="card-body">
+          <h3 class="drink-name">{{cocktail.name}}</h3>
+          <p class="drink-description">{{cocktail.description}}</p>
+          <p class="drink-recipe">{{cocktail.recipe}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

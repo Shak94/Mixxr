@@ -20,6 +20,9 @@ class Migration(migrations.Migration):
                 ('recipe', models.TextField(max_length=700)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
+            options={
+                'ordering': ['name'],
+            },
         ),
         migrations.CreateModel(
             name='MockTail',
@@ -31,6 +34,9 @@ class Migration(migrations.Migration):
                 ('recipe', models.TextField(max_length=700)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
+            options={
+                'ordering': ['name'],
+            },
         ),
         migrations.CreateModel(
             name='Shooter',
@@ -42,6 +48,7 @@ class Migration(migrations.Migration):
                 ('recipe', models.TextField(max_length=700)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
+           
             options={
                 'ordering': ['name'],
             },

@@ -1,23 +1,31 @@
-{% extends 'base.html' %}
-
-{% block title %} Mocktail - Mixxr {% endblock %}
-{% block content %}
-  <div class="container">
-    <h1 class="text-center my-5">MockTail Menu</h1>
-    <p class="paragraph"> Welcome to our Mocktail Page! Here, you can explore our illustrious collection of alcohol-free mocktails that are designed to delight your taste buds and elevate your spirits. Crafted with care and creativity, our mocktails offer a refreshing and vibrant alternative to traditional cocktails. Savor the flavors of hand-picked ingredients and exquisite combinations, all without the presence of alcohol. Whether you're seeking a zesty citrus blend, a fruity infusion, or a herbal concoction, our mocktails promise a delightful and guilt-free experience. Join us on this alcohol-free journey and discover the art of mocktail mixology. Cheers to delicious and invigorating moments! </p>
-    <div class="row">
-      {% for mocktail in mocktails %}
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{{ mocktail.image }}" class="card-img-top custom-image " alt="{{ mocktail.name }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ mocktail.name }}</h5>
-              <a href="#" class="btn btn-yellow">View Details</a>
-            </div>
-          </div>
+{% extends 'base.html' %} {% block title %} Mocktail - Mixxr {% endblock %} {%
+block content %}
+<div class="container">
+  <h1 class="text-center my-5">MockTail Menu</h1>
+  <p class="paragraph">
+    Explore our collection of alcohol-free mocktails that are designed to
+    delight your taste buds. Crafted with care and creativity, our mocktails
+    offer refreshing and vibrant flavors. Savor the zesty citrus blends, fruity
+    infusions, and herbal concoctions that promise a delightful and guilt-free
+    experience. Join us on this alcohol-free journey and discover the art of
+    mocktail mixology. Cheers to delicious and invigorating moments!
+  </p>
+  <div class="row">
+    {% for mocktail in mocktails %}
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img
+          src="{{ mocktail.image }}"
+          class="card-img-top custom-image"
+          alt="{{ mocktail.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ mocktail.name }}</h5>
+          <a href="#" class="btn btn-yellow">View Details</a>
         </div>
-      {% endfor %}
+      </div>
     </div>
+    {% endfor %}
   </div>
+</div>
 {% endblock %}
-
