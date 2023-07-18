@@ -1,17 +1,23 @@
-{% extend 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <div class="card">
-        <img
-          src="{{cocktail.image}}"
-          class="card-img-top"
-          alt="cocktail_Image"
-        />
+        <img src="{{cocktail.image}}" class="card-img-top" alt="cocktail_Image" />
         <div class="card-body">
           <h3 class="drink-name">{{cocktail.name}}</h3>
           <p class="drink-description">{{cocktail.description}}</p>
           <p class="drink-recipe">{{cocktail.recipe}}</p>
+
+          <div class="btn-group d-flex justify-content-between">
+            <a href="{% url 'cocktail_update' cocktail.pk %}" class=" btn-icon btn-primary position-absolute bottom-0 start-0">
+              <i class="fas fa-edit"></i> 🍷
+            </a>
+            <a href="{% url 'cocktail_delete' cocktail.pk %}" class=" btn-icon btn-danger position-absolute bottom-0 end-0">
+              <i class="fas fa-trash-alt"></i> ❌ 
+            </a>
+          </div>
         </div>
       </div>
     </div>

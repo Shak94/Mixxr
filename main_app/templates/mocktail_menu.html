@@ -1,5 +1,8 @@
-{% extends 'base.html' %} {% block title %} Mocktail - Mixxr {% endblock %} {%
-block content %}
+{% extends 'base.html' %}
+
+{% block title %} Mocktail - Mixxr {% endblock %}
+
+{% block content %}
 <div class="container">
   <h1 class="text-center my-5">MockTail Menu</h1>
   <p class="paragraph">
@@ -10,6 +13,7 @@ block content %}
     experience. Join us on this alcohol-free journey and discover the art of
     mocktail mixology. Cheers to delicious and invigorating moments!
   </p>
+  <a class="button is-dark" href="{% url 'mocktail_create' %}">🆕</a>
   <div class="row">
     {% for mocktail in mocktails %}
     <div class="col-md-4 mb-4">
@@ -17,15 +21,15 @@ block content %}
         <img
           src="{{ mocktail.image }}"
           class="card-img-top custom-image"
-          alt="{{ mocktail.name }}"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ mocktail.name }}</h5>
-          <a href="#" class="btn btn-yellow">View Details</a>
+          alt="{{ mocktail.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ mocktail.name }}</h5>
+            <a href="{% url 'mocktail_detail' mocktail.pk %}" class="btn btn-primary">View Details</a>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
-{% endblock %}
+  {% endblock %}
+  

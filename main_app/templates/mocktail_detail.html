@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <img src="{{mocktail.image}}" class="card-img-top" alt="mocktail_Image" />
+        <div class="card-body">
+          <h3 class="drink-name">{{mocktail.name}}</h3>
+          <p class="drink-description">{{mocktail.description}}</p>
+          <p class="drink-recipe">{{mocktail.recipe}}</p>
+
+          <div class="btn-group d-flex justify-content-between">
+            <a href="{% url 'mocktail_update' mocktail.pk %}" class=" btn-icon btn-primary position-absolute bottom-0 start-0">
+              <i class="fas fa-edit"></i> 🍷
+            </a>
+            <a href="{% url 'mocktail_delete' mocktail.pk %}" class=" btn-icon btn-danger position-absolute bottom-0 end-0">
+              <i class="fas fa-trash-alt"></i> ❌ 
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
