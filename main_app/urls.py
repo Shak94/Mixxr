@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import path, include 
 
 urlpatterns = [
-  path('', views.Home.as_view(), name="home"),
+  path('', views.Home.as_view(), name='home'),
   path('cocktail/',views.CocktailMenu.as_view(), name="cocktail_menu"),
   path('cocktail/new/', views.CocktailCreate.as_view(), name ="cocktail_create"),
   path('cocktail/<int:pk>/', views.CocktailDetail.as_view(), name='cocktail_detail'),
