@@ -3,23 +3,32 @@
 
 {% block title %} Cocktail - Mixxr {% endblock %}
 {% block content %}
+<style>
+  .carousel-image {
+    height: 800px;
+    object-fit: cover;
+  }
+
+
+</style>
+
 <div class="container-fluid px-0">
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeinHGLfeYh2Z03E03mxGbmux2Uxk0Ej9frA&usqp=CAU" class="d-block w-100" alt="...">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeinHGLfeYh2Z03E03mxGbmux2Uxk0Ej9frA&usqp=CAU" class="d-block w-100 carousel-image" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/mgg-vitchakorn-frJqgIoK61g-unsplash.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'images/mgg-vitchakorn-frJqgIoK61g-unsplash.jpg' %}" class="d-block w-100 carousel-image" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/armin-lotfi-LzFRtExnY3c-unsplash.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'images/armin-lotfi-LzFRtExnY3c-unsplash.jpg' %}" class="d-block w-100 carousel-image" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/friends-drink.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'images/friends-drink.jpg' %}" class="d-block w-100 carousel-image" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/louis-hansel-_6ZqQc02NYc-unsplash.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'images/louis-hansel-_6ZqQc02NYc-unsplash.jpg' %}" class="d-block w-100 carousel-image" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -32,23 +41,24 @@
     </button>
   </div>
 </div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-6 mt-5">
-      <div class="card" style="width: 21rem">
+      <div class="card-left" style="width: 21rem">
         <img src="{% static 'images/jamie-street-vcn2ndJ5LwE-unsplash.jpg' %}" class="card-img-top" alt="Summer Drinks">
         <div class="card-body">
           <h5 class="card-title">Summer Drinks</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+   
         </div>
       </div>
     </div>
     <div class="col-sm-6 mt-5">
-      <div class="card" style="width: 21rem">
+      <div class="card-right" style="width: 21rem">
         <img src="{% static 'images/conny-schneider-N0fftoUOiM4-unsplash.jpg' %}" class="card-img-top" alt="Winter Drinks">
         <div class="card-body">
           <h5 class="card-title">Winter Drinks</h5>
-          <a href="#" class="btn btn-secondary">Go somewhere</a>
+     
         </div>
       </div>
     </div>

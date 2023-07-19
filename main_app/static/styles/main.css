@@ -14,14 +14,15 @@
   }
   
   .navbar {
-    border-top: 3px solid orange;
-    border-bottom: 3px solid orange;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  
+    border-bottom: 3px solid black;
+    background-image: url();
+  
   }
   
+  
   .logo-image {
-    width: 27%;
+    width: 30%;
     height: auto;
   }
   
@@ -43,6 +44,39 @@
   }
   
   .paragraph {
+    font-size: 150%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
   }
   
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card {
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  .col-sm-6 {
+    margin-left: 0; 
+    width: 100%; 
+    text-align: center;
+
+  }
+  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
