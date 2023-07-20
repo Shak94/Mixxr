@@ -27,7 +27,7 @@
   }
   
   .nav-link {
-    font-size: 16px !important;
+    font-size: 25px !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold !important;
   }
@@ -50,7 +50,7 @@
   }
 
 .card-img-top {
-    height: 200px;
+    height: 300px;
     object-fit: cover;
   }
   
@@ -80,3 +80,6 @@
   h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
+.container{
+    margin-top: 30px;
+}
